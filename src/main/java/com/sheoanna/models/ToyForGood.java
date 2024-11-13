@@ -11,4 +11,17 @@ public class ToyForGood extends Toy {
         this.recommendedAge = recommendedAge;
         this.category = category;
     }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getRecommendedAge() {
+        return recommendedAge;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
 }
