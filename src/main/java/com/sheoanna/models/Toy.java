@@ -16,4 +16,9 @@ public abstract class Toy {
     public String getTitle(){
         return title;
     }
+
+    @Override
+    public String toString() {
+        return "Identifier: " + id + ", Title: " + title;
+    }
 }
