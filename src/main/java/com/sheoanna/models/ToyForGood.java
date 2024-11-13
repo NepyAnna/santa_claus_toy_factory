@@ -5,8 +5,8 @@ public class ToyForGood extends Toy {
     private String recommendedAge;
     private String category;
 
-    public ToyForGood(String identifier, String title, String brand, String recommendedAge, String category) {
-        super(identifier, title);
+    public ToyForGood(String id, String title, String brand, String recommendedAge, String category) {
+        super(id, title);
         this.brand = brand;
         this.recommendedAge = recommendedAge;
         this.category = category;
