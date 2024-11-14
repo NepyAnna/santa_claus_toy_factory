@@ -1,17 +1,10 @@
 package com.sheoanna;
 
-/**
- * Hello world!
- */
+import com.sheoanna.view.HomeView;
+
 public final class App {
     private App() {
-    }
-
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        new HomeView();
     }
 }
