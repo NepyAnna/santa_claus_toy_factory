@@ -35,6 +35,7 @@ public class ElfView extends View {
         System.out.println("Ingrese la categoria:");
         String category = scanner.next();
 
+        //controller.postGoodToy(new GoodToyDto(title, brand, age, category));
     }
 
     public static void closeSession() {

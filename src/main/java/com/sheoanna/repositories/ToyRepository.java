@@ -32,11 +32,10 @@ public class ToyRepository {
             toysG.removeIf(toy -> toy.getId().equals(id));
 
         } else if(targetSymbol == 'N') {
-
+            toysN.removeIf(toy -> toy.getId().equals(id));
         } else {
            System.out.println("Wrong Identifier!");
         }
-       // toys.removeIf(toy -> toy.getId().equals(id));
     }
 
     public List<ToyForGood> getToysG() {
