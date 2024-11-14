@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.sheoanna.dtos.GoodToyDto;
+import com.sheoanna.dtos.NaughtyToyDto;
 import com.sheoanna.models.ToyForGood;
 import com.sheoanna.models.ToyForNaughty;
 
@@ -20,11 +21,12 @@ public class ToyRepository {
         return "Toy added successfully!";
     }
 
-    public void addToyForNaughty(String title, String content) {
+    public String addToyForNaughty(NaughtyToyDto dto) {
         String idOfToy = "N" + (toysN.size() + 1);
-        ToyForNaughty toy = new ToyForNaughty(idOfToy, title, content);
+        ToyForNaughty toy = new ToyForNaughty(idOfToy, dto.title(), dto.content());
         
         toysN.add(toy);
+        return "Toy added successfully!";
     }
 
     public void removeToy(String id) {

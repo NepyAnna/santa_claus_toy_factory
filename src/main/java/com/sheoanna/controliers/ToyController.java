@@ -12,8 +12,8 @@ public class ToyController {
     }
 
     public void postGoodToy(GoodToyDto goodToyDto) {
-        // hará algo con el repositorio
-        // si todo ha ido bien devolverá la respuesta
-        //ElfView.addToyResponse();
+        String response = repository.addToyForGood(goodToyDto);
+        
+        ElfView.addToyResponse(response);
     }
 }

@@ -38,6 +38,10 @@ public class ElfView extends View {
         //controller.postGoodToy(new GoodToyDto(title, brand, age, category));
     }
 
+    public static void addToyResponse(String response) {
+        System.out.println(response);
+    }
+
     public static void closeSession() {
         HomeView.index();
     }
