@@ -9,5 +9,11 @@ public class ElfView extends View {
         System.out.println("4. Cerrar sesión");
         System.out.println("Seleccione una opción:");
         int option = scanner.nextInt();
+
+        if (option == 4) closeSession();
+    }
+
+    public static void closeSession() {
+        HomeView.index();
     }
 }
