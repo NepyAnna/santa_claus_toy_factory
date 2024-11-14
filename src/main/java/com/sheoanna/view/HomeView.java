@@ -1,6 +1,6 @@
 package com.sheoanna.view;
 
-public class HomeView {
+public class HomeView  extends View{
     public static void index() {
         System.out.println("Iniciar sesión de trabajo como:");
         System.out.println("1. Elfo");
@@ -9,5 +9,7 @@ public class HomeView {
         System.out.println("Seleccione una opción:");
 
         int option = scanner.nextInt();
+
+        if (option == 1) ElfView.index();
     }
 }
