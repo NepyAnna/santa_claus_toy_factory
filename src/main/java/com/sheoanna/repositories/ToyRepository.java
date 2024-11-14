@@ -3,6 +3,7 @@ package com.sheoanna.repositories;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sheoanna.dtos.GoodToyDto;
 import com.sheoanna.models.ToyForGood;
 import com.sheoanna.models.ToyForNaughty;
 
@@ -10,11 +11,13 @@ public class ToyRepository {
     private List<ToyForGood> toysG = new ArrayList<>();
     private List<ToyForNaughty> toysN =new ArrayList<>();
 
-    public void addToyForGood(String title, String brand, String recommendedAge, String category) {
+    public String addToyForGood(GoodToyDto dto) {
         String idOfToy = "G" + (toysG.size() + 1);
-        ToyForGood toy = new ToyForGood(idOfToy, title, brand, recommendedAge, category);
+        ToyForGood toy = new ToyForGood(idOfToy, dto.title(), dto.brand(), dto.recommendedAge(), dto.category());
         
         toysG.add(toy);
+
+        return "Toy added successfully!";
     }
 
     public void addToyForNaughty(String title, String content) {

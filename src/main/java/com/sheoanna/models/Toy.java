@@ -3,7 +3,7 @@ package com.sheoanna.models;
 public abstract class Toy {
     protected String id;
     protected String title;
-    protected boolean isGoodToy;
+   // protected boolean isGoodToy;
     
     
     public Toy(String id, String title) {
@@ -11,10 +11,10 @@ public abstract class Toy {
         this.title = title;
     }
 
-    public Toy(String title, boolean isGoodToy) {
+    /*public Toy(String title, boolean isGoodToy) {
         this.title = title;
         this.isGoodToy = isGoodToy;
-    }
+    }*/
 
     public String getId() {
         return id;
