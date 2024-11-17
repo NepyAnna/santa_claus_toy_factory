@@ -19,6 +19,14 @@ public abstract class Toy {
         return title;
     }
 
+    public void setId(int id) {
+        if (isGoodToy) {
+            this.id = "B" + id;
+        } else {
+            this.id = "M" + id;
+        }
+    }
+
     @Override
     public String toString() {
         return "Identifier: " + id + ", Title: " + title;

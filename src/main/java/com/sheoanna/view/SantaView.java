@@ -13,11 +13,9 @@ public class SantaView extends View {
         int option = scanner.nextInt();
 
         if (option == 4) HomeView.index();
-
     }
 
     public static void closeSession() {
         HomeView.index();
     }
-
 }
