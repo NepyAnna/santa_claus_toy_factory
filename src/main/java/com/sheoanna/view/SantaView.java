@@ -1,6 +1,9 @@
 package com.sheoanna.view;
 
+import com.sheoanna.controliers.ToyController;
+
 public class SantaView extends View {
+
     public static void index() {
         System.out.println("-----------------------------------------");
         System.out.println("Toy Manager (Session Type: Santa)");
@@ -12,7 +15,19 @@ public class SantaView extends View {
 
         int option = scanner.nextInt();
 
+        if (option == 1) getAllToysForGood();
+        if (option == 2) getToysForNaughty();
         if (option == 4) HomeView.index();
+    }
+
+    public static void getAllToysForGood(){
+        System.out.println(controller.getToysForGood());
+        index();
+    }
+
+    public static void getToysForNaughty() {
+        System.out.println(controller.getToysForNaughty());
+        index();
     }
 
     public static void closeSession() {

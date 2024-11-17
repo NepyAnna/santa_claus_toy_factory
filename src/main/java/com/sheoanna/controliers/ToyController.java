@@ -29,6 +29,14 @@ public class ToyController {
         return repository.getAllToys();
     }
 
+    public String getToysForGood() {
+        return repository.getToysForGood();
+    }
+    
+    public String getToysForNaughty(){
+        return repository.getToysForNaughty();
+    }
+
     public void  deleteToy(IdOfToyDTO dto) {
         String response = repository.deleteToy(dto);
 

@@ -6,7 +6,6 @@ import com.sheoanna.dtos.IdOfToyDTO;
 import com.sheoanna.dtos.NaughtyToyDto;
 
 public class ElfView extends View {
-    private static final ToyController controller = new ToyController();
 
     public static void index() {
         System.out.println("-----------------------------------------");
@@ -66,7 +65,7 @@ public class ElfView extends View {
 
     public static void getAllToys() {
         System.out.println(controller.getAllToys());
-        ElfView.index();;
+        index();;
     }
 
     public static void deleteToy() {
