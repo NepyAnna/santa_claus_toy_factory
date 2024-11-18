@@ -1,0 +1,9 @@
+Good Toys:
+ID,Title,Brand,Recommended Age,Category
+G1,Good toy1,lrgo,10,consructor
+G2,Good toy2,HotWeels,12,cars and trucks
+
+Naughty Toys:
+ID,Title,Content
+N1,Small present1,ball
+N2,Small toy 2,pop it

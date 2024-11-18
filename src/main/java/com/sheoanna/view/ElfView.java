@@ -1,6 +1,5 @@
 package com.sheoanna.view;
 
-import com.sheoanna.controliers.ToyController;
 import com.sheoanna.dtos.GoodToyDto;
 import com.sheoanna.dtos.IdOfToyDTO;
 import com.sheoanna.dtos.NaughtyToyDto;

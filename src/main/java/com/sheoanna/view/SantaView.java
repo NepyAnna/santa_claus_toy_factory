@@ -1,7 +1,5 @@
 package com.sheoanna.view;
 
-import com.sheoanna.controliers.ToyController;
-
 public class SantaView extends View {
 
     public static void index() {
@@ -17,6 +15,7 @@ public class SantaView extends View {
 
         if (option == 1) getAllToysForGood();
         if (option == 2) getToysForNaughty();
+        if (option == 3) saveToysCSV();
         if (option == 4) HomeView.index();
     }
 
@@ -27,6 +26,13 @@ public class SantaView extends View {
 
     public static void getToysForNaughty() {
         System.out.println(controller.getToysForNaughty());
+        index();
+    }
+
+    public static void saveToysCSV(){
+        String filePath = "./toys.csv";
+        controller.exportToysToCSV(filePath);
+        System.out.println("Saved toy list.");
         index();
     }
 

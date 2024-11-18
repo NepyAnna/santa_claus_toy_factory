@@ -1,9 +1,14 @@
 package com.sheoanna.controliers;
 
+import java.util.List;
+
 import com.sheoanna.dtos.GoodToyDto;
 import com.sheoanna.dtos.IdOfToyDTO;
 import com.sheoanna.dtos.NaughtyToyDto;
+import com.sheoanna.models.ToyForGood;
+import com.sheoanna.models.ToyForNaughty;
 import com.sheoanna.repositories.ToyRepository;
+import com.sheoanna.utils.CsvExporter;
 import com.sheoanna.view.ElfView;
 
 public class ToyController {
@@ -41,5 +46,11 @@ public class ToyController {
         String response = repository.deleteToy(dto);
 
         ElfView.addToyResponse(response);
+    }
+
+    public void exportToysToCSV(String filePath) {
+        List<ToyForGood> goodToys = repository.getToysG();
+        List<ToyForNaughty> naughtyToys = repository.getToysN();
+        CsvExporter.exportToysToCSV(goodToys, naughtyToys, filePath);
     }
 }
