@@ -1,6 +1,7 @@
 Good Toys:
 ID,Title,Brand,Recommended Age,Category
-G1,title,lego,12,constructor
+G1,doll,barbi,10,dolls
 
 Naughty Toys:
 ID,Title,Content
+N1,title,content

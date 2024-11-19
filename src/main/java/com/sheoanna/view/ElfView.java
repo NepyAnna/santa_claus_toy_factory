@@ -1,7 +1,6 @@
 package com.sheoanna.view;
 
 import com.sheoanna.dtos.GoodToyDto;
-import com.sheoanna.dtos.IdOfToyDTO;
 import com.sheoanna.dtos.NaughtyToyDto;
 
 public class ElfView extends View {
@@ -72,7 +71,7 @@ public class ElfView extends View {
         System.out.println("Enter the ID of the toy to be deleted: ");
         String idOfToy = scanner.next();
 
-        controller.deleteToy(new IdOfToyDTO(idOfToy));
+        controller.deleteToy(idOfToy);
         index();
     }
 

@@ -3,7 +3,6 @@ package com.sheoanna.controliers;
 import java.util.List;
 
 import com.sheoanna.dtos.GoodToyDto;
-import com.sheoanna.dtos.IdOfToyDTO;
 import com.sheoanna.dtos.NaughtyToyDto;
 import com.sheoanna.models.ToyForGood;
 import com.sheoanna.models.ToyForNaughty;
@@ -42,8 +41,8 @@ public class ToyController {
         return repository.getToysForNaughty();
     }
 
-    public void  deleteToy(IdOfToyDTO dto) {
-        String response = repository.deleteToy(dto);
+    public void  deleteToy(String id) {
+        String response = repository.deleteToy(id);
 
         ElfView.addToyResponse(response);
     }
