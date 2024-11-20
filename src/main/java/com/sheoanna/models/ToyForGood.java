@@ -26,7 +26,7 @@ public class ToyForGood extends Toy {
 
     @Override
     public String toString() {
-        return super.toString() + ", Brand: " + brand + ", Age: " + recommendedAge + ", Category: " + category;
+        return super.toString() + ", Brand: " + brand + ", Recommended age: " + recommendedAge + ", Category: " + category;
     }
 
 }
