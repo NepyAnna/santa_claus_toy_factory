@@ -8,7 +8,7 @@ public class ToyForGoodTest {
 
     @BeforeEach
     public void setUp(){
-        toy = new ToyForGood("G1", "Doll", "Barbie",5, "Dolls");
+        toy = new ToyForGood("G1", "Doll", "Barbie","+5", "Dolls");
     }
     @Test
     void testGetBrand() {
@@ -23,11 +23,11 @@ public class ToyForGoodTest {
 
     @Test
     void testGetRecommendedAge() {
-        assertEquals(5, toy.getRecommendedAge());
+        assertEquals("+5", toy.getRecommendedAge());
     }
 
     @Test
     void testToString() {
-        assertEquals("Identifier: G1, Title: Doll, Brand: Barbie, Recommended age: 5, Category: Dolls", toy.toString());
+        assertEquals("Identifier: G1, Title: Doll, Brand: Barbie, Recommended age: +5, Category: Dolls", toy.toString());
     }
 }

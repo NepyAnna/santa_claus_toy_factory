@@ -63,7 +63,7 @@ public class ToyRepository {
     }
 
     public String getToysForGood() {
-        if (toysN.isEmpty()) {
+        if (toysG.isEmpty()) {
             return "There are no any avaliable toy.";
         } else {
             return toysG.stream()

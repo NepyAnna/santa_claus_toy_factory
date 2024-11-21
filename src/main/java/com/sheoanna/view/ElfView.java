@@ -47,7 +47,7 @@ public class ElfView extends View {
         System.out.println("Enter the brand:");
         String brand = scanner.nextLine();
         System.out.println("Enter the recommended age:");
-        int age = scanner.nextInt();
+        String age = scanner.nextLine();
         scanner.nextLine();
         System.out.println("Enter the category:");
         String category = scanner.nextLine();

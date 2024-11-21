@@ -2,10 +2,10 @@ package com.sheoanna.models;
 
 public class ToyForGood extends Toy {
     private String brand;
-    private int recommendedAge;
+    private String recommendedAge;
     private String category;
 
-    public ToyForGood(String id, String title, String brand, int recommendedAge, String category) {
+    public ToyForGood(String id, String title, String brand, String recommendedAge, String category) {
         super(id, title);
         this.brand = brand;
         this.recommendedAge = recommendedAge;
@@ -16,7 +16,7 @@ public class ToyForGood extends Toy {
         return brand;
     }
 
-    public int getRecommendedAge() {
+    public String getRecommendedAge() {
         return recommendedAge;
     }
 

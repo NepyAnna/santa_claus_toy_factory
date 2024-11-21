@@ -23,7 +23,7 @@ public class ToyRepositoryTest {
 
     @Test
     void testAddToyForGood() {
-        GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", 5, "Action Figure");
+        GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", "+5", "Action Figure");
 
         String response = toyRepository.addToyForGood(goodToyDto);
         
@@ -32,7 +32,6 @@ public class ToyRepositoryTest {
         List<ToyForGood> toys = toyRepository.getToysG();
         assertEquals(1, toys.size());
         assertEquals("Toy 1", toys.get(0).getTitle());
-
     }
 
     @Test
@@ -46,12 +45,11 @@ public class ToyRepositoryTest {
         List<ToyForNaughty> toys = toyRepository.getToysN();
         assertEquals(1, toys.size());
         assertEquals("Toy 1", toys.get(0).getTitle());
-
     }
 
     @Test
     void testDeleteToy() {
-        GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", 5, "Action Figure");
+        GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", "+5", "Action Figure");
         toyRepository.addToyForGood(goodToyDto);
 
         List<ToyForGood> toysBeforeDelete = toyRepository.getToysG();
@@ -66,7 +64,7 @@ public class ToyRepositoryTest {
 
     @Test
     void testGetAllToys() {
-         GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", 5, "Action Figure");
+         GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", "+5", "Action Figure");
         NaughtyToyDto naughtyToyDto = new NaughtyToyDto("Toy 2", "Content of Toy 2");
 
         toyRepository.addToyForGood(goodToyDto);
@@ -79,7 +77,7 @@ public class ToyRepositoryTest {
 
     @Test
     void testGetToysForGood() {
-        GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", 5, "Action Figure");
+        GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", "+5", "Action Figure");
 
         toyRepository.addToyForGood(goodToyDto);
 
@@ -101,13 +99,11 @@ public class ToyRepositoryTest {
     void testGetToysG() {
         String toysForGood = toyRepository.getToysForGood();
         assertEquals("There are no any avaliable toy.", toysForGood);
-
     }
 
     @Test
     void testGetToysN() {
         String toysForNaughty = toyRepository.getToysForNaughty();
         assertEquals("There are no any avaliable toy.", toysForNaughty);
-
     }
 }

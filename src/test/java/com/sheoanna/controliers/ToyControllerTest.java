@@ -2,10 +2,8 @@ package com.sheoanna.controliers;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import com.sheoanna.dtos.GoodToyDto;
 import com.sheoanna.dtos.NaughtyToyDto;
 
@@ -19,11 +17,11 @@ public class ToyControllerTest {
 
    @Test
     public void postGoodToyTest() {
-        GoodToyDto goodToy = new GoodToyDto("Teddy Bear", "Barnie", 3, "Plush");
+        GoodToyDto goodToy = new GoodToyDto("Teddy Bear", "Barnie", "+3", "Plush");
         controller.postGoodToy(goodToy);
 
         String toys = controller.getToysForGood();
-        //assertTrue(toys.contains("Barnie"));
+        assertTrue(toys.contains("Teddy Bear"));
     }
 
     @Test
@@ -37,7 +35,7 @@ public class ToyControllerTest {
 
     @Test
     void testGetAllToys() {
-        GoodToyDto goodToy = new GoodToyDto("Lego Set", "Lego", 8, "Building");
+        GoodToyDto goodToy = new GoodToyDto("Lego Set", "Lego", "+8", "Building");
         NaughtyToyDto naughtyToy = new NaughtyToyDto("Noisy Toy", "Extremely loud");
 
         controller.postGoodToy(goodToy);
@@ -50,7 +48,7 @@ public class ToyControllerTest {
 
     @Test
     void testDeleteToy() {
-        GoodToyDto goodToy = new GoodToyDto("Puzzle", "PuzzleBrand", 6, "Smart");
+        GoodToyDto goodToy = new GoodToyDto("Puzzle", "PuzzleBrand", "+6", "Smart");
         NaughtyToyDto naughtyToy = new NaughtyToyDto("Noisy Toy", "Extremely loud");
 
         controller.postGoodToy(goodToy);
@@ -70,7 +68,7 @@ public class ToyControllerTest {
 
     @Test
     void testExportToysToCSV() {
-        GoodToyDto goodToy = new GoodToyDto("Toy Car", "HotWeels", 5, "Vehicles");
+        GoodToyDto goodToy = new GoodToyDto("Toy Car", "HotWeels", "+5", "Vehicles");
         NaughtyToyDto naughtyToy = new NaughtyToyDto("Noisy Drum", "Annoying sounds");
 
         controller.postGoodToy(goodToy);

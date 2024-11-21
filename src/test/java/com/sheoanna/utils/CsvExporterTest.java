@@ -30,8 +30,8 @@ public class CsvExporterTest {
     void testExportToysToCSV() throws IOException {
         // Setup sample data
         List<ToyForGood> goodToys = new ArrayList<>();
-        goodToys.add(new ToyForGood("G1", "Teddy Bear", "Barnie", 3, "Plush"));
-        goodToys.add(new ToyForGood("G2", "Lego Set", "Lego", 7, "Building"));
+        goodToys.add(new ToyForGood("G1", "Teddy Bear", "Barnie", "+3", "Plush"));
+        goodToys.add(new ToyForGood("G2", "Lego Set", "Lego", "+7", "Building"));
 
         List<ToyForNaughty> naughtyToys = new ArrayList<>();
         naughtyToys.add(new ToyForNaughty("N1", "Noisy Drum", "Annoying sound maker"));
@@ -46,8 +46,8 @@ public class CsvExporterTest {
         String expectedContent = """
                 Good Toys:
                 ID,Title,Brand,Recommended Age,Category
-                G1,Teddy Bear,Barnie,3,Plush
-                G2,Lego Set,Lego,7,Building
+                G1,Teddy Bear,Barnie,+3,Plush
+                G2,Lego Set,Lego,+7,Building
 
                 Naughty Toys:
                 ID,Title,Content

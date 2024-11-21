@@ -8,7 +8,7 @@ public class GoodToyDtoTest {
     
     @BeforeEach
     public void setUp() {
-        toy = new GoodToyDto("Lego Set", "Lego", 8, "Building");
+        toy = new GoodToyDto("Lego Set", "Lego", "+8", "Building");
     }
     
     
@@ -24,7 +24,7 @@ public class GoodToyDtoTest {
 
     @Test
     void testRecommendedAge() {
-        assertEquals(8, toy.recommendedAge());
+        assertEquals("+8", toy.recommendedAge());
     }
 
     @Test
@@ -34,7 +34,7 @@ public class GoodToyDtoTest {
 
     @Test
     public void testToString() { 
-    String expected = "GoodToyDto[title=Lego Set, brand=Lego, recommendedAge=8, category=Building]";
+    String expected = "GoodToyDto[title=Lego Set, brand=Lego, recommendedAge=+8, category=Building]";
         assertEquals(expected, toy.toString());
     }
 }
