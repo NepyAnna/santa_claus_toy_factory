@@ -3,8 +3,8 @@ package com.sheoanna.controliers;
 import com.sheoanna.view.HomeView;
 
 public class HomeController {
-    
-    public HomeController(){
+
+    public HomeController() {
         index();
     }
 

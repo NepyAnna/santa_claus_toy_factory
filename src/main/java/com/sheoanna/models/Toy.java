@@ -3,8 +3,6 @@ package com.sheoanna.models;
 public abstract class Toy {
     protected String id;
     protected String title;
-    //protected boolean isGoodToy;
-    
 
     public Toy(String id, String title) {
         this.id = id;
@@ -15,17 +13,9 @@ public abstract class Toy {
         return id;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
-
-    /*public void setId(int id) {
-        if (isGoodToy) {
-            this.id = "B" + id;
-        } else {
-            this.id = "M" + id;
-        }
-    }*/
 
     @Override
     public String toString() {

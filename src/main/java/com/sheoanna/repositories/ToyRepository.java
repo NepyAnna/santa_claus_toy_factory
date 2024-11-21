@@ -14,12 +14,13 @@ public class ToyRepository {
     private List<ToyForGood> toysG = new ArrayList<>();
     private List<ToyForNaughty> toysN = new ArrayList<>();
 
-    public ToyRepository() {}
+    public ToyRepository() {
+    }
 
     public String addToyForGood(GoodToyDto dto) {
         String idOfToy = "G" + (toysG.size() + 1);
         ToyForGood toy = new ToyForGood(idOfToy, dto.title(), dto.brand(), dto.recommendedAge(), dto.category());
-        
+
         toysG.add(toy);
 
         return "Toy added successfully!";
@@ -28,7 +29,7 @@ public class ToyRepository {
     public String addToyForNaughty(NaughtyToyDto dto) {
         String idOfToy = "N" + (toysN.size() + 1);
         ToyForNaughty toy = new ToyForNaughty(idOfToy, dto.title(), dto.content());
-        
+
         toysN.add(toy);
         return "Toy added successfully!";
     }
@@ -39,11 +40,11 @@ public class ToyRepository {
         if (targetSymbol == 'G') {
             toysG.removeIf(toy -> toy.getId().equals(id));
             return "Toy successfully removed";
-        } else if(targetSymbol == 'N') {
+        } else if (targetSymbol == 'N') {
             toysN.removeIf(toy -> toy.getId().equals(id));
             return "Toy successfully removed";
         } else {
-           return "Wrong Identifier!";
+            return "Wrong Identifier!";
         }
     }
 
@@ -52,32 +53,32 @@ public class ToyRepository {
         toys.addAll(toysG);
         toys.addAll(toysN);
 
-        if(toys.isEmpty()){
+        if (toys.isEmpty()) {
             return "There are no any avaliable toy.";
         } else {
             return toys.stream()
-            .map(Toy::toString)
-            .collect(Collectors.joining("\n"));
+                    .map(Toy::toString)
+                    .collect(Collectors.joining("\n"));
         }
     }
 
     public String getToysForGood() {
-        if(toysN.isEmpty()){
+        if (toysN.isEmpty()) {
             return "There are no any avaliable toy.";
         } else {
             return toysG.stream()
-            .map(Toy::toString)
-            .collect(Collectors.joining("\n"));
+                    .map(Toy::toString)
+                    .collect(Collectors.joining("\n"));
         }
     }
 
-    public String getToysForNaughty(){
-        if(toysN.isEmpty()){
+    public String getToysForNaughty() {
+        if (toysN.isEmpty()) {
             return "There are no any avaliable toy.";
         } else {
             return toysN.stream()
-            .map(Toy::toString)
-            .collect(Collectors.joining("\n"));
+                    .map(Toy::toString)
+                    .collect(Collectors.joining("\n"));
         }
     }
 

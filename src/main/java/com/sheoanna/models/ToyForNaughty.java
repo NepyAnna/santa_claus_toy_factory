@@ -1,6 +1,6 @@
 package com.sheoanna.models;
 
-public class ToyForNaughty extends Toy{
+public class ToyForNaughty extends Toy {
     private String content;
 
     public ToyForNaughty(String title, String id, String content) {

@@ -1,7 +1,7 @@
 package com.sheoanna.view;
 
-public class HomeView  extends View {
-    
+public class HomeView extends View {
+
     public static void index() {
         System.out.println("Log in as:");
         System.out.println("1. Elf.");
@@ -11,9 +11,12 @@ public class HomeView  extends View {
 
         int option = scanner.nextInt();
 
-        if (option == 1) ElfView.index();
-        if (option == 2) SantaView.index();
-        if (option == 3) quit();
+        if (option == 1)
+            ElfView.index();
+        if (option == 2)
+            SantaView.index();
+        if (option == 3)
+            quit();
     }
 
     public static void quit() {

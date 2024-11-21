@@ -13,13 +13,17 @@ public class SantaView extends View {
 
         int option = scanner.nextInt();
 
-        if (option == 1) getAllToysForGood();
-        if (option == 2) getToysForNaughty();
-        if (option == 3) saveToysCSV();
-        if (option == 4) HomeView.index();
+        if (option == 1)
+            getAllToysForGood();
+        if (option == 2)
+            getToysForNaughty();
+        if (option == 3)
+            saveToysCSV();
+        if (option == 4)
+            HomeView.index();
     }
 
-    public static void getAllToysForGood(){
+    public static void getAllToysForGood() {
         System.out.println(controller.getToysForGood());
         index();
     }
@@ -29,7 +33,7 @@ public class SantaView extends View {
         index();
     }
 
-    public static void saveToysCSV(){
+    public static void saveToysCSV() {
         String filePath = "./toys.csv";
         controller.exportToysToCSV(filePath);
         System.out.println("Saved toy list.");

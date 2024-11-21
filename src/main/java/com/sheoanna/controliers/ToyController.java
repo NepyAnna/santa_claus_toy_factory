@@ -1,7 +1,6 @@
 package com.sheoanna.controliers;
 
 import java.util.List;
-
 import com.sheoanna.dtos.GoodToyDto;
 import com.sheoanna.dtos.NaughtyToyDto;
 import com.sheoanna.models.ToyForGood;
@@ -13,17 +12,17 @@ import com.sheoanna.view.ElfView;
 public class ToyController {
     private final ToyRepository repository;
 
-    public ToyController(){
+    public ToyController() {
         this.repository = new ToyRepository();
     }
 
     public void postGoodToy(GoodToyDto goodToyDto) {
         String response = repository.addToyForGood(goodToyDto);
-        
+
         ElfView.addToyResponse(response);
     }
 
-    public void postNaughtyToy(NaughtyToyDto naughtyToyDto){
+    public void postNaughtyToy(NaughtyToyDto naughtyToyDto) {
         String response = repository.addToyForNaughty(naughtyToyDto);
 
         ElfView.addToyResponse(response);
@@ -36,12 +35,12 @@ public class ToyController {
     public String getToysForGood() {
         return repository.getToysForGood();
     }
-    
-    public String getToysForNaughty(){
+
+    public String getToysForNaughty() {
         return repository.getToysForNaughty();
     }
 
-    public void  deleteToy(String id) {
+    public void deleteToy(String id) {
         String response = repository.deleteToy(id);
 
         ElfView.addToyResponse(response);

@@ -16,10 +16,14 @@ public class ElfView extends View {
         int option = scanner.nextInt();
         scanner.nextLine();
 
-        if(option == 1) selectChild();
-        if(option == 2) getAllToys();
-        if(option == 3) deleteToy();
-        if (option == 4) closeSession();
+        if (option == 1)
+            selectChild();
+        if (option == 2)
+            getAllToys();
+        if (option == 3)
+            deleteToy();
+        if (option == 4)
+            closeSession();
     }
 
     public static void selectChild() {
@@ -30,8 +34,10 @@ public class ElfView extends View {
         int option = scanner.nextInt();
         scanner.nextLine();
 
-        if (option == 1) postGoodToy();
-        if (option == 2) postNaughtyToy();
+        if (option == 1)
+            postGoodToy();
+        if (option == 2)
+            postNaughtyToy();
     }
 
     public static void postGoodToy() {
@@ -56,14 +62,14 @@ public class ElfView extends View {
         String title = scanner.nextLine();
         System.out.println("Enter the content: ");
         String content = scanner.nextLine();
-       
+
         controller.postNaughtyToy(new NaughtyToyDto(title, content));
         index();
     }
 
     public static void getAllToys() {
         System.out.println(controller.getAllToys());
-        index();;
+        index();
     }
 
     public static void deleteToy() {
