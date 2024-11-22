@@ -1,4 +1,3 @@
 package com.sheoanna.dtos;
 
-public record NaughtyToyDto(String title, String content) {
-}
+public record NaughtyToyDto(String title, String content) {}

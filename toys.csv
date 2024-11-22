@@ -1,7 +1,9 @@
 Good Toys:
 ID,Title,Brand,Recommended Age,Category
-G1,doll,barbi,10,dolls
+G1,car ,hot weels,+5,cars and tracks
+G2,1,doll,+8,dolls
 
 Naughty Toys:
 ID,Title,Content
-N1,title,content
+N1,small prssent,just a ball
+N2,bubbles,bubbls

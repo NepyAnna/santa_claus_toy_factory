@@ -3,7 +3,6 @@ package com.sheoanna.repositories;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import com.sheoanna.dtos.GoodToyDto;
 import com.sheoanna.dtos.NaughtyToyDto;
 import com.sheoanna.models.Toy;
