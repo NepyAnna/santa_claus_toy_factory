@@ -61,7 +61,7 @@ public class ToyRepositoryTest {
 
     @Test
     void testGetAllToys() {
-         GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", "+5", "Action Figure");
+        GoodToyDto goodToyDto = new GoodToyDto("Toy 1", "Brand A", "+5", "Action Figure");
         NaughtyToyDto naughtyToyDto = new NaughtyToyDto("Toy 2", "Content of Toy 2");
 
         toyRepository.addToyForGood(goodToyDto);
