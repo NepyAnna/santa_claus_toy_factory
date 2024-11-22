@@ -1,0 +1,7 @@
+Good Toys:
+ID,Title,Brand,Recommended Age,Category
+G1,Toy Car,HotWeels,+5,Vehicles
+
+Naughty Toys:
+ID,Title,Content
+N1,Noisy Drum,Annoying sounds

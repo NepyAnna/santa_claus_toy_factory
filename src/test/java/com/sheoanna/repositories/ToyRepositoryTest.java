@@ -2,12 +2,9 @@ package com.sheoanna.repositories;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.util.List;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import com.sheoanna.dtos.GoodToyDto;
 import com.sheoanna.dtos.NaughtyToyDto;
 import com.sheoanna.models.ToyForGood;
@@ -82,7 +79,7 @@ public class ToyRepositoryTest {
         toyRepository.addToyForGood(goodToyDto);
 
         String toysForGood = toyRepository.getToysForGood();
-        //assertTrue(toysForGood.contains("Toy 1"));
+        assertTrue(toysForGood.contains("Toy 1"));
     }
 
     @Test

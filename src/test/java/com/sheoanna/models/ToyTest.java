@@ -1,7 +1,6 @@
 package com.sheoanna.models;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,11 +21,6 @@ public class ToyTest {
     void testGetTitle() {
         assertEquals("Doll", toy.getTitle());
     }
-
-    /*@Test
-    void testSetId() {
-
-    }*/
 
     @Test
     void testToString() {
